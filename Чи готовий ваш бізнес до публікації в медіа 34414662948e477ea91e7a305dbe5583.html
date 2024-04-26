@@ -1,0 +1,691 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Чи готовий ваш бізнес до публікації в медіа?</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="34414662-948e-477e-a91e-7a305dbe5583" class="page sans"><header><h1 class="page-title">Чи готовий ваш бізнес до публікації в медіа?</h1><p class="page-description"></p></header><div class="page-body"><h1 id="e127d13a-9c08-4122-903c-2f9c62d22d85" class=""><mark class="highlight-yellow"><strong>Мене звати Нія Нікель</strong></mark></h1><p id="541a3939-1125-4c35-b44a-d0bf06b434a3" class="">Я <strong>підприємиця та комунікаційниця</strong>. Вже більше дванадцяти років допомагаю великим та малим підприємствам зростати без залучення великих бюджетів.</p><h3 id="7ca36f6c-94f3-4256-90c3-96886be0ce06" class="">Лише для музичного фестивалю <strong>BeLive</strong> я випустила більше 600 публікацій у ЗМІ. </h3><p id="c2b8bf0c-a9b3-462e-a6ae-fa1e0bcac8f5" class=""><mark class="highlight-orange_background">Це приблизно</mark><mark class="highlight-orange_background"><strong> 5 500 000 грн</strong></mark><mark class="highlight-orange_background"> зекономленого рекламного бюджету.</mark> </p><p id="0de728b0-94e5-4901-a4bf-503c73fa2f7b" class=""><strong>Ми розмістили ролик на екранах Оушен плази та вийшли в усіх медіа України. Мої улюблені публікації:</strong></p><figure id="5f4d1a78-b3fb-42f1-bb13-d8bad902dca7"><a href="https://babel.ua/news/54906-finansoviy-servis-fondy-rozpovidaye-pro-biznes-yakiy-uspishno-perezhivaye-pandemiyu" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Як інтернет-бутік, мʼясний ресторан і організатор тренінгів виживають в кризу — лайфхаки власників</div><div class="bookmark-description">Fondy на прикладі успішних українських підприємців розповідає, як бізнес може пережити пандемію коронавірусу</div></div><div class="bookmark-href"><img src="https://babel.ua/apple-touch-icon.png" class="icon bookmark-icon"/>https://babel.ua/news/54906-finansoviy-servis-fondy-rozpovidaye-pro-biznes-yakiy-uspishno-perezhivaye-pandemiyu</div></div><img src="https://babel.ua/static/content/nqyjccwr/thumbs/1200x630/d/22/44ccfe397ecb78a8dc09d6e524c1322d.jpg?v=5175" class="bookmark-image"/></a></figure><figure id="3be339e5-cc70-466c-8972-b2821edefe58"><a href="https://ain.ua/ru/2020/11/23/fondy-zapustili-mediaproekt-yakij-maye-na-meti-pokazati-biznes-yakij-uspishno-perezhivaye-pandemiyu/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Fondy запустили медіапроект, який має на меті показати бізнес, який успішно переживає пандемію – AIN.UA</div><div class="bookmark-description">Фінансовий сервіс Fondy закликає українських підприємців розраховувати на себе. Героями його медіапроекту стали власники малого бізнесу, які своїми силами долають коронавірусну кризу. Ці історії можуть показати приклад іншим. Звичайний вірус атакує людський організм. COVID-19 виявився набагато страшнішим — він також вбиває економіку, від чого страждають навіть цілком здорові люди. В умовах карантинних обмежень підприємці б’ються</div></div><div class="bookmark-href"><img src="https://ain.ua/wp-content/uploads/2017/11/cropped-ain-icon-192x192.png?x52581" class="icon bookmark-icon"/>https://ain.ua/ru/2020/11/23/fondy-zapustili-mediaproekt-yakij-maye-na-meti-pokazati-biznes-yakij-uspishno-perezhivaye-pandemiyu/</div></div><img src="https://lh6.googleusercontent.com/MUEpVLLxmug4MmH6dEPPdwVJfEHJLLGYWuCWAZslsNZAdv38yi6snknHjaH0Pl_N397K39_A8A7Dx5GlCo1Lo008d5icjRe6g0y1X9APOC_Zsu4S7CDXoTwZG0e1d5tXLzl4SNjm" class="bookmark-image"/></a></figure><figure id="99c1d66e-e2bd-4918-af40-1402c0de6e9d"><a href="https://bit.ua/2020/12/fashion-quarantine/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Як fashion-бренди переживають карантин</div><div class="bookmark-description">Після запровадження локдауну в березні 2020-го fashion-індустрія сильно постраждала. Ми поспілкувалися з трьома українськими брендами і розповідаємо, як карантин вплинув на їхні продажі, роботу, зарплати, а також як організовували доставку і оплату товарів.</div></div><div class="bookmark-href"><img src="https://bit.ua/wp-content/uploads/2020/12/cropped-fav-bit-tech_5122-192x192.png" class="icon bookmark-icon"/>https://bit.ua/2020/12/fashion-quarantine/</div></div><img src="https://bit.ua/wp-content/uploads/2020/12/FB-Post-38.jpg" class="bookmark-image"/></a></figure><p id="0b3f4fa9-15fb-4b27-83b6-8db47be2b4b3" class="">
+</p><h3 id="74af049c-498b-4075-a104-a40067b33b36" class="">Встигла попрацювати з дуже великими проєктами, як наприклад “На Урок”, який займає 14 місце по популярності в українському Google (наступний після них Hotline)</h3><figure id="7b00cc8c-7655-4ffb-b8ac-a09f449d1f84" class="image"><a href="%D0%A7%D0%B8%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B2%D0%B0%D1%88%20%D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%20%D0%B4%D0%BE%20%D0%BF%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%96%CC%88%20%D0%B2%20%D0%BC%D0%B5%D0%B4%D1%96%D0%B0%2034414662948e477ea91e7a305dbe5583/%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA_%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0_2024-04-26_%25D0%25B2_20.27.11.png"><img style="width:708px" src="%D0%A7%D0%B8%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B2%D0%B0%D1%88%20%D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%20%D0%B4%D0%BE%20%D0%BF%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%96%CC%88%20%D0%B2%20%D0%BC%D0%B5%D0%B4%D1%96%D0%B0%2034414662948e477ea91e7a305dbe5583/%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA_%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0_2024-04-26_%25D0%25B2_20.27.11.png"/></a></figure><figure id="0c296620-e9f8-457d-bc73-935c3f35a5dd"><a href="https://naurok.ua/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Онлайн-школа «На Урок» для учнів</div><div class="bookmark-description">Онлайн-школа «На Урок» — місце, де кожен може отримати якісні знання. Бери участь в олімпіадах та конкурсах, навчайся на онлайн-курсах, читай статті та дивись вебінари про шкільне життя.</div></div><div class="bookmark-href"><img src="https://naurok.ua/favicon.ico" class="icon bookmark-icon"/>https://naurok.ua/</div></div></a></figure><p id="8d9fb667-0dbc-4d72-8dc9-8ca6c2ecef17" class="block-color-default">
+</p><p id="012ba623-8cd8-40ac-bd3a-d96b3a53039d" class="block-color-orange_background"><strong>Для проєкту ми зробили близько 250 виходів у ЗМІ за рік. Ось мої найулюбленіші:</strong></p><figure id="26e48df9-1e9d-4960-83a2-788e2b9788d1"><a href="https://delo.ua/opinions/zakinchujemo-11-klas-jak-pravilno-obrati-vischij-378690/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Закінчуємо 11 клас: як правильно обрати вищий навчальний заклад?</div><div class="bookmark-description">Варто ретельно проаналізувати власні нахили та вирахувати сфери діяльності, які викликають найбільший інтерес</div></div><div class="bookmark-href"><img src="https://delo.ua/apple-touch-icon.png" class="icon bookmark-icon"/>https://delo.ua/opinions/zakinchujemo-11-klas-jak-pravilno-obrati-vischij-378690/</div></div><img src="https://delo.ua/static/content/thumbs/1200x630/4/63/jg4533---c1200x630x50px50p-c1200x630x50px50p--d7eb9626ea4c5e80141fbebda3c41634.jpg" class="bookmark-image"/></a></figure><figure id="4db6831e-a9b5-450f-a0b6-60d5e557951e"><a href="https://24tv.ua/education/yak-pidgotuvatisya-do-zno-matematiki-ne-vidkladayuchi-novini-ukrayini_n1537415" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Як підготуватися до ЗНО з математики, не відкладаючи: поради та вправи</div><div class="bookmark-description">Випускники вже почали готуватися до ЗНО у 2021 році, адже вже за кілька місяців пройде тестування. Тому читайте поради та цікаві вправи, які допоможуть легко підготуватися до ЗНО з математики.</div></div><div class="bookmark-href"><img src="https://24tv.ua/assets/sites/education/apple-touch-icon-152x152.png" class="icon bookmark-icon"/>https://24tv.ua/education/yak-pidgotuvatisya-do-zno-matematiki-ne-vidkladayuchi-novini-ukrayini_n1537415</div></div><img src="https://24tv.ua/resources/photos/news/202102/1537415.jpg?v=1661265058000&amp;w=1200&amp;h=675" class="bookmark-image"/></a></figure><figure id="3bd9db55-7d1b-46d4-980f-4ed08aea4477"><a href="https://mind.ua/publications/20223402-korisni-navichki-yak-opanuvati-mistectvo-komunikaciyi?rebuild=on&amp;fbclid=IwAR0x1CXSIdYdrG7XZfXyI47mCg2SgLOYGKYLp-MVG7NZCFve9KZjM5BJkiY" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Корисні навички: як опанувати мистецтво комунікації</div><div class="bookmark-description">І чому вміння спілкуватися – невід’ємна риса лідера</div></div><div class="bookmark-href"><img src="https://s.mind.ua/static/img/icons/apple-touch-icon.png?v=BG78B5G8yl" class="icon bookmark-icon"/>https://mind.ua/publications/20223402-korisni-navichki-yak-opanuvati-mistectvo-komunikaciyi?rebuild=on&amp;fbclid=IwAR0x1CXSIdYdrG7XZfXyI47mCg2SgLOYGKYLp-MVG7NZCFve9KZjM5BJkiY</div></div><img src="https://s.mind.ua/img/forall/a/202234/2.jpg?1617959894" class="bookmark-image"/></a></figure><p id="22534dae-383c-4d25-892f-0809e4f612f5" class="">
+</p><h3 id="e7996a3a-bc7f-42a3-89e3-0fad4a650d53" class="">У мене є мій власний проєкт → ГО Епіпросвіта</h3><p id="fdb95ca8-9a6a-4a34-9b9a-7a33e6c2771b" class="">Який сьогодні опікує 10000 пацієнтів, входить в офіційні експерти МОЗ, є одним з головних облич легалізації медичного канабісу.</p><figure id="c0489afb-fc4e-4dad-be38-4ea6a8c60366" class="image"><a href="%D0%A7%D0%B8%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B2%D0%B0%D1%88%20%D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%20%D0%B4%D0%BE%20%D0%BF%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%96%CC%88%20%D0%B2%20%D0%BC%D0%B5%D0%B4%D1%96%D0%B0%2034414662948e477ea91e7a305dbe5583/%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA_%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0_2024-04-26_%25D0%25B2_20.28.44.png"><img style="width:708px" src="%D0%A7%D0%B8%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B2%D0%B0%D1%88%20%D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%20%D0%B4%D0%BE%20%D0%BF%D1%83%D0%B1%D0%BB%D1%96%D0%BA%D0%B0%D1%86%D1%96%D1%96%CC%88%20%D0%B2%20%D0%BC%D0%B5%D0%B4%D1%96%D0%B0%2034414662948e477ea91e7a305dbe5583/%25D0%25A1%25D0%25BD%25D0%25B8%25D0%25BC%25D0%25BE%25D0%25BA_%25D1%258D%25D0%25BA%25D1%2580%25D0%25B0%25D0%25BD%25D0%25B0_2024-04-26_%25D0%25B2_20.28.44.png"/></a></figure><figure id="44213e24-853f-4bc8-803b-6ee0ca1d753e"><a href="https://www.epiprosvita.org/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Epiprosvita</div><div class="bookmark-description">Нещодавно прийнятий Закон України «Про мобілізаційну підготовку та мобілізацію» вніс важливі зміни до правил надання від</div></div><div class="bookmark-href"><img src="https://assets-global.website-files.com/img/webclip.png" class="icon bookmark-icon"/>https://www.epiprosvita.org/</div></div></a></figure><p id="f42d217f-3ffc-4d50-bc26-a1441700c0ec" class="block-color-default">
+</p><p id="04ec9792-459b-4a21-8518-7a2854be31ce" class="block-color-orange_background"><strong>Зробили 20 виходів у медіа до дня обізнаності про епілепсію от головні:</strong></p><figure id="3233be3a-60f3-4247-9813-eaaf7a1f0932"><a href="https://www.platfor.ma/topic/u-vas-chy-lyudej-poruch-mozhe-buty-epilepsiya-tse-ne-vyrok-ale-os-shho-treba-znaty-pro-tsej-rozlad/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">У вас чи людей поруч може бути епілепсія. Це не вирок, але ось що треба знати про цей розлад</div><div class="bookmark-description">Важливі знання</div></div><div class="bookmark-href"><img src="https://www.platfor.ma/wp-content/uploads/2020/10/cropped-platforma-favicon-256x256-1-1-192x192.jpg" class="icon bookmark-icon"/>https://www.platfor.ma/topic/u-vas-chy-lyudej-poruch-mozhe-buty-epilepsiya-tse-ne-vyrok-ale-os-shho-treba-znaty-pro-tsej-rozlad/</div></div><img src="https://www.platfor.ma/wp-content/uploads/2024/02/shutterstock_383365909-1000x480-2x.jpg" class="bookmark-image"/></a></figure><figure id="15e193ea-bc2f-40e4-960e-63915648d798"><a href="https://vikna.tv/styl-zhyttya/zdorovia-ta-krasa/vsesvitnij-den-obiznanosti-pro-epilepsiyu-shho-varto-znaty-pro-hvorobu/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://vikna.tv/styl-zhyttya/zdorovia-ta-krasa/vsesvitnij-den-obiznanosti-pro-epilepsiyu-shho-varto-znaty-pro-hvorobu/</div></div></a></figure><figure id="28609b72-5515-431f-91b9-3989dfb14822"><a href="https://hromadske.ua/posts/den-obiznanosti-pro-epilepsiyu-sho-treba-znati-pro-cyu-hvorobu-i-yak-nadati-pershu-dopomogu" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">День обізнаності про епілепсію: що треба знати про цю хворобу і як надати першу допомогу</div><div class="bookmark-description">Щороку в другий понеділок лютого відзначають Всесвітній день обізнаності про епілепсію. За даними ВООЗ, епілепсією хворіє кожна 26 людина на планеті, а 80% хворих припадає на країни, що розвиваються.</div></div><div class="bookmark-href"><img src="https://hromadske.ua/static/build/assets/apple-touch-icon-B9IX5xvH.png" class="icon bookmark-icon"/>https://hromadske.ua/posts/den-obiznanosti-pro-epilepsiyu-sho-treba-znati-pro-cyu-hvorobu-i-yak-nadati-pershu-dopomogu</div></div><img src="https://hromadske.ua/static/content/thumbs/1200x630/a/ed/nqtrp7---c1200x630x50px50p--03099bd70e41984f9cdbb1a9d3e1ceda.jpg" class="bookmark-image"/></a></figure><p id="9e70e109-b785-4c66-8762-71468fcdecdb" class="">
+</p><h3 id="0fe56cab-d910-4082-9a61-65a33c421128" class="">Були також і  маленькі бізнеси, як приватна перукарська практика чи кав’ярня біля дому.</h3><blockquote id="3b3d78dc-3092-49c6-8d83-df30cdf5933a" class="">Дванадцять років я розробляла, стратегувала, управляла та піарила без перебільшення сотні проєктів: <strong>Wirex, Fondy, фестиваль Білі ночі, iNBase, #Oddee agency, Brain Tank</strong>, та багато-багато інших бізнесів.</blockquote><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="73372697-09c0-4871-bdf9-6cd7ae8fc887"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Проте, часто бізнеси звертаючись за розробкою комунікаційних кампаній в медіа є не готовими до публічності. Розпочати медіадіяльність в такий момент означає репутаційно знищити компанію.</div></figure><h1 id="302488e2-b635-44e2-b80c-0d64dc5cb824" class="block-color-yellow">Цей чек-лист</h1><p id="d863ae92-d911-4c73-ae0a-3d036764c1aa" class="">
+</p><p id="b1c9d4dc-4520-4170-844a-96f6e6c326f0" class="">допоможе перевірити чи готовий ваш бізнес до публічності, а якщо ні – то він стане путівником що і як треба привести до ладу.</p><hr id="2a38240f-5c92-478c-8e0d-658ff0066587"/><p id="ac7f1997-5e85-4f11-8410-c78e8e795b2b" class="">
+</p><ul id="1b7f6523-dbbf-4574-a75f-9e3f110c21b9" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"><strong>1. Яка ідея бізнесу?</strong></span><div class="indented"></div></li></ul><p id="93815992-67b1-42d8-9817-8c922a8643bd" class="">Продавати каву біля метро – це не медійна ідея, а от продавати каву біля метро в маленькій сімейній кав’ярні, де солодощі пече мама, син бариста, а донька займається візуальним оформленням – так. Тобто у вашого бізнесу має бути легенда навколо діяльності, тоді медіа буде за що зачепитись.</p><p id="f4ca38e6-c29b-4fcf-a712-ff18044e38fb" class="">
+</p><ul id="c06550ce-e748-418b-ac81-e9af6680f26b" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"><strong>2. Чи легко вас запам’ятати?</strong></span><div class="indented"></div></li></ul><p id="7645ef4b-d9b6-48b9-87c7-c4e3c22765ed" class="">Чи розроблена у вас назва, лого, брендові кольори. Чи виглядають ваші дописи в соціальних медіа так, що вони впізнавані?</p><p id="0b31c57b-1698-4088-b905-0fa6972e809e" class="">
+</p><ul id="cea9bbce-e6ca-4f76-ae58-45ecd2d6d79f" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"><strong>3. Як ви представлені в цифровому середовищі?</strong></span><div class="indented"></div></li></ul><p id="7228bfc2-17c5-48a3-963a-20da90e061fe" class="">Коли медіа пише про вас, то куди має привести вашого потенційного клієнта: на сайт, в соц мережі, в телеграм бот? Ймовірність, що людина прочитала про вас і одразу пішла щось купувати нульова. Спочатку вона підпишеться на вас, потім трохи за вами понаглядає і вже опинившись поруч з вашою локацією щось купить.</p><p id="15f9e477-ba50-4bed-9583-30675b51b3c7" class="">
+</p><ul id="e50438d7-50b4-4636-8ab5-3cb453e174d5" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"><strong>4. Особистості власників.</strong></span><div class="indented"></div></li></ul><p id="443a3399-d184-418a-8b68-49a75f592a4a" class="">Якщо у вас є співвласники, які погано ставляться до робітників або є не толерантними чи просто поганцями – краще не йти в медіа. Яскравий приклад тому мережа “Хлібний”, яка не виплачувала вчасно заробітну плату і погано ставилася до робітників, а тепер поступово зачиняє свої заклади.</p><p id="001293c8-914b-4e32-afd2-bb1acb5508d4" class="">
+</p><ul id="42452557-09f8-4e02-b81d-ff4b790a2634" class="to-do-list"><li><div class="checkbox checkbox-off"></div> <span class="to-do-children-unchecked"><strong>5. Хто буде публічною особою від вашого бізнесу?</strong></span><div class="indented"></div></li></ul><p id="b816c82b-c139-4f2a-b18e-dc9bd200cee2" class="">Хто буде спілкуватись з медіа та давати інтерв’ю. Бажано щоб це була одна і та ж людина, і щоб вона була з співвласників, оскільки інші люди будуть у вашій компанії змінюватись і ви просто будете оплачувати чужу популярність.</p><p id="d96f20d5-9e34-4dcd-831b-bcef704cd70d" class="">
+</p><p id="dc5bf9a3-1f04-4421-a319-10768ffa61ff" class="">Звісно що цей список не вичерпний, оскільки кожен бізнес унікальний і вимагає детального аналізу зважаючи на ринок та сильні сторони команди. Але це базові питання, які допоможуть вам зробити попередній аналіз ситуації.</p><p id="98dbf5c2-d937-4c1e-a93e-0d98a71ec994" class="">
+</p><p id="4bab8067-1505-4ded-b389-d6748423bed1" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
